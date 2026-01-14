@@ -1,7 +1,9 @@
 package com.example.zeroday;
 
 public class UserService {
+  private final UserRepository repository = new UserRepository();
+
   public String searchUser(String nameParam) {
-    return "not implemented";
+    return repository.findUserByName(nameParam);
   }
 }
